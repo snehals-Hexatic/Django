@@ -18,8 +18,6 @@ class Restaurant(models.Model):
         OTHER = 'OT','Other'
         
         
-        
-        
     name = models.CharField(max_length=100)
     website = models.URLField(default='')
     date_opened = models.DateField()
@@ -40,7 +38,7 @@ class Rating(models.Model):
     )
     
     def __str__(self):
-     return f"Rating:{self.rating}"
+     return f"Rating:{self.rating}" 
  
 class sale(models.Model):
     restaurant = models.ForeignKey(Restaurant, on_delete=models.SET_NULL,null=True)
